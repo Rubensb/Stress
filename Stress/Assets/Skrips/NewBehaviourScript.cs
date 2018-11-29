@@ -11,7 +11,8 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		//TODO: lel
+		//TODO:
 
+//TODO: Wir werden so much hacker skurr
 	}
 }
