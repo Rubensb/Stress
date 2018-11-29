@@ -1,4 +1,4 @@
 # Stress
 Game 4 everybody
 
-atom://teletype/portal/346df493-a338-4327-b56a-ea484127b58a
+atom://teletype/portal/f0b93e5b-8962-43fd-87f6-44fab3f42bb7
