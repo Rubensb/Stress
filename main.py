@@ -1,9 +1,7 @@
 import random
 import math
 
-#atom://teletype/portal/3bb2f35b-28fb-4d08-ac8d-b24dee207b66
-
-num_decks = 2
+num_decks = 2#
 a_points = 10
 b_points = 10
 
@@ -47,9 +45,11 @@ def playGame():
         a_deck_active = []
         b_deck_active = []
         updateDeck(a_cards, a_deck_active, 0)
-        updateDeck(b_cards, b_deck_active, 0)
+        updateDeck(b_cards, b_deck_active, 0)#
 
-        while 1 == 1:
+        gaming = True
+
+        while gaming == True:
             print('Hand 0', a_hand)
             print('Hand 1', b_hand)
             print(a_deck_active, b_deck_active)
@@ -58,10 +58,10 @@ def playGame():
             if player == 2:
                 return 0
             if player == 3:
-                for i in range(0, (len(a_deck_active)-1)):
-                    updateDeck(a_deck_active, a_cards, i)
-                for i in range(0, (len(b_deck_active)-1)):
-                    updateDeck(b_deck_active, b_cards, i)
+                for i in range(0, len(a_deck_active)):
+                    a_cards.append(a_deck_active.pop((len(a_deck_active)-1)))
+                for i in range(0, len(b_deck_active)):
+                    b_cards.append(b_deck_active.pop((len(a_deck_active)-1)))
                 print('Cards a', a_cards)
                 print('Cards b', b_cards)
                 return 0
@@ -116,7 +116,6 @@ def playGame():
     #push cards from one deck to another
     def updateDeck(o_deck, n_deck, position):
         n_deck.append(o_deck.pop(position))
-        #return n_deck[:]
 
     def checkWin(a_deck, b_deck):
         if len(a_deck) == 0:
@@ -129,6 +128,7 @@ def playGame():
             a_points = a_points - 1
         else:
             win = False
+        gaming = False
         return win
 
 
