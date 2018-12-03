@@ -1,6 +1,8 @@
 import random
 import math
 
+#atom://teletype/portal/3bb2f35b-28fb-4d08-ac8d-b24dee207b66
+
 num_decks = 2
 a_points = 10
 b_points = 10
