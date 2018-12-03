@@ -36,8 +36,8 @@ def playGame():
             a_hand.append(a_cards.pop(0))
             b_hand.append(b_cards.pop(0))
 
-        '''print('Cards a', a_cards)
-        print('Cards b', b_cards)'''
+        print('Cards a', a_cards)
+        print('Cards b', b_cards)
 
     initRound()
 
@@ -55,6 +55,15 @@ def playGame():
             player = int(input('Player: '))
             if player == 2:
                 return 0
+            if player == 3:
+                for i in range(0, (len(a_deck_active)-1)):
+                    updateDeck(a_deck_active, a_cards, i)
+                for i in range(0, (len(b_deck_active)-1)):
+                    updateDeck(b_deck_active, b_cards, i)
+                print('Cards a', a_cards)
+                print('Cards b', b_cards)
+                return 0
+
             direction = int(input('Stack: '))
             action = int(input('Card: '))
 
@@ -79,6 +88,7 @@ def playGame():
             if card_position == 20:
                 print('Card does not exist!')
 
+
     def playCard(player_hand, active_deck, position, player_cards):
         if player_hand[position] == (active_deck[(len(active_deck)-1)] + 1) or player_hand[position] == (active_deck[(len(active_deck)-1)] - 1) and player_hand[position] != 14 and player_hand[position] != 2:
             active_deck.append(player_hand.pop(position))
@@ -91,7 +101,7 @@ def playGame():
             player_hand.append(player_cards.pop(0))
         else:
             print ('You cannot play this card!')
-        winner = checkWin(a_deck, b_deck)
+        winner = checkWin(a_cards, b_cards)
 
     #find Positions of Card in Hand
     def findPosition(hand, action):
@@ -104,7 +114,7 @@ def playGame():
     #push cards from one deck to another
     def updateDeck(o_deck, n_deck, position):
         n_deck.append(o_deck.pop(position))
-        return n_deck[:]
+        #return n_deck[:]
 
     def checkWin(a_deck, b_deck):
         if len(a_deck) == 0:
