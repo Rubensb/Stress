@@ -8,7 +8,7 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -393,6 +393,7 @@ PlayerSettings:
   switchAllowsVideoCapturing: 1
   switchAllowsRuntimeAddOnContentInstall: 0
   switchDataLossConfirmation: 0
+  switchUserAccountLockEnabled: 0
   switchSupportedNpadStyles: 3
   switchNativeFsCacheSize: 32
   switchIsHoldTypeHorizontal: 0
@@ -615,12 +616,16 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Build: 0
+    Collab: 1
+    ErrorHub: 0
+    Hub: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: 584b0872-7d0f-417c-8b30-df947f38cb7a
+  projectName: Stress
+  organizationId: bela
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

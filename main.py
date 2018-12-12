@@ -1,7 +1,7 @@
 import random
 import math
 
-num_decks = 2#
+num_decks = 2
 a_points = 10
 b_points = 10
 
@@ -45,7 +45,7 @@ def playGame():
         a_deck_active = []
         b_deck_active = []
         updateDeck(a_cards, a_deck_active, 0)
-        updateDeck(b_cards, b_deck_active, 0)#
+        updateDeck(b_cards, b_deck_active, 0)
 
         gaming = True
 
