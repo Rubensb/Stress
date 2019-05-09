@@ -13,11 +13,6 @@ body {
   height: 33.33vh;
   background-size: 100%;
   background-repeat: no-repeat;
-  /*background-image: url(card_sprite_14.svg);*/
-}
-
-a {
-  padding-top: 20px;
 }
 
 #p1 {
@@ -26,4 +21,8 @@ a {
 
 #p2 {
   background-image: none;
+}
+
+.box {
+  height: 50%;
 }

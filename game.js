@@ -31,8 +31,6 @@ function setup() {
   active_b.push(player_b.pop());
   active_a[0].setPosition(5);
   active_b[0].setPosition(6);
-  console.log(table_a);
-  console.log(table_b);
 }
 
 function shuffle(a) {
@@ -52,16 +50,17 @@ function printList(arr) {
 function checkRules(a, b) {
   vala = a.getSuit();
   valb = b.getSuit();
-  if (valb == vala+1 || valb == vala-1 && valb != 14) {
+  if (valb == vala+1 || valb == vala-1) {
     return true;
   }
-  else if (valb == 14 && valb == 2){
+  else if (valb == 14 && vala == 2){
     return true;
   }
-  else if (valb == 2 && valb == 14){
+  else if (valb == 2 && vala == 14){
     return true;
   }
   else {
+    console.log("Pls follow the Rules!");
     return false;
   }
 }
@@ -90,7 +89,6 @@ table_a[2].element.addEventListener("click", function(){ holdCard(0, 2); });
 table_a[3].element.addEventListener("click", function(){ holdCard(0, 3); });
 
 active_a[0].element.addEventListener("click", function(){
-  console.log(checkRules(active_a[0], table_a[tempA]));
   if (checkRules(active_a[0], table_a[tempA]) == true) {
     active_a.unshift(table_a[tempA]);
     active_a[0].setPosition(5);
@@ -100,7 +98,17 @@ active_a[0].element.addEventListener("click", function(){
     console.log(table_a);
   }
 });
-active_b[0].element.addEventListener("click", function(){ holdCard(0, active_b[0]); });
+
+active_b[0].element.addEventListener("click", function(){
+  if (checkRules(active_b[0], table_b[tempB]) == true) {
+    active_b.unshift(table_b[tempB]);
+    active_b[0].setPosition(6);
+    table_b[tempB] = player_b.pop();
+    table_b[tempB].setPosition(tempB+7);
+    console.log(active_b);
+    console.log(table_b);
+  }
+});
 
 table_b[0].element.addEventListener("click", function(){ holdCard(1, 0); });
 table_b[1].element.addEventListener("click", function(){ holdCard(1, 1); });
