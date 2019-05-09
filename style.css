@@ -23,6 +23,10 @@ body {
   background-image: none;
 }
 
+#pos0 {
+  visibility: hidden;
+}
+
 .box {
   height: 50%;
 }
