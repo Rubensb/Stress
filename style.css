@@ -1,7 +1,9 @@
 body {
-  background-color: black;
+  background-color: white;
   margin: 0px;
   padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
 .col-4 {
@@ -9,18 +11,18 @@ body {
   float: left;
   padding: 0px;
   color: red;
-  width: 25vh;
-  height: 33.33vh;
+  width: 25%;
+  height: 33vh;
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 #p1 {
-  background-image: none;
+  background-image: url(c_0.svg);
 }
 
 #p2 {
-  background-image: none;
+  background-image: url(c_0.svg);
 }
 
 #pos0 {
@@ -29,4 +31,17 @@ body {
 
 .box {
   height: 50%;
+}
+
+@media (max-width: 380px) {
+  body {
+    font-size: 11px;
+    font-weight: 400;
+  }
+  #sa {
+    padding-top: 38px;
+  }
+  #sb {
+    padding-top: 38px;
+  }
 }

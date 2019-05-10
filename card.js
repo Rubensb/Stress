@@ -7,7 +7,7 @@ class Card {
   setPosition(pos) {
     this.pos = pos;
     this.element = document.getElementById(`pos${this.pos}`);
-    this.element.style.backgroundImage = `url(card_sprite_${this.suit}.svg)`;
+    this.element.style.backgroundImage = `url(c_${this.suit}.svg)`;
   }
 
   getPosition() {
@@ -17,5 +17,5 @@ class Card {
   getSuit() {
     return this.suit;
   }
-  
+
 }

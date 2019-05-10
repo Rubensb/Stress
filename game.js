@@ -115,6 +115,7 @@ function checkSituation() {
     console.log(player_b);
   }
   checkWin();
+  updateStats();
 }
 
 function shuffle(a) {
@@ -123,6 +124,17 @@ function shuffle(a) {
         [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
+}
+
+function updateStats() {
+  var rca = document.getElementById('rca');
+  var rcb = document.getElementById('rcb');
+  var sa = document.getElementById('sa');
+  var sb = document.getElementById('sb');
+  rca.innerHTML = `Remaining cards: ${player_a.length}`;
+  rcb.innerHTML = `Remaining cards: ${player_b.length}`;
+  sa.innerHTML = `Score: ${scorea}`;
+  sb.innerHTML = `Score: ${scoreb}`;
 }
 
 setup();
